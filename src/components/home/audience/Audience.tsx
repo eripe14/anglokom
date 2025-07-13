@@ -4,6 +4,7 @@ import {
     FaBuilding,
     FaUser
 } from 'react-icons/fa'
+import Link from "next/link";
 
 const targetAudienceData = [
     {
@@ -68,8 +69,8 @@ export default function Audience() {
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                         Dla kogo jest nasza oferta
                     </h2>
-                    <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
-                    <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                    <div className="w-24 h-1 bg-sky-700 mx-auto mb-8"></div>
+                    <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                         Nasze usługi kierujemy do różnych grup klientów, dostosowując ofertę do indywidualnych potrzeb
                         każdego segmentu.
                     </p>
@@ -83,14 +84,14 @@ export default function Audience() {
                         >
                             <div className="flex items-start space-x-4">
                                 <div
-                                    className="bg-blue-100 text-blue-600 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    className="bg-sky-50 text-sky-700 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0">
                                     {audience.icon}
                                 </div>
                                 <div className="flex-1">
                                     <h3 className="text-xl font-semibold text-gray-900 mb-3">
                                         {audience.title}
                                     </h3>
-                                    <p className="text-gray-600 mb-4 leading-relaxed">
+                                    <p className="text-gray-700 mb-4 leading-relaxed text-justify">
                                         {audience.description}
                                     </p>
                                     <div className="space-y-2">
@@ -99,9 +100,9 @@ export default function Audience() {
                                         </h4>
                                         <ul className="space-y-1">
                                             {audience.services.map((service, index) => (
-                                                <li key={index} className="flex items-start text-sm text-gray-600">
+                                                <li key={index} className="flex items-start text-sm text-gray-700">
                                                     <div
-                                                        className="bg-blue-600 w-1.5 h-1.5 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                                        className="bg-sky-700 w-1.5 h-1.5 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                                                     <span>{service}</span>
                                                 </li>
                                             ))}
@@ -111,21 +112,6 @@ export default function Audience() {
                             </div>
                         </div>
                     ))}
-                </div>
-
-                <div className="text-center mt-12">
-                    <div className="bg-blue-50 p-6 rounded-xl max-w-4xl mx-auto">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                            Potrzebujesz więcej informacji?
-                        </h3>
-                        <p className="text-gray-600 mb-4">
-                            Skontaktuj się z nami, aby otrzymać szczegółową ofertę dostosowaną do Twoich potrzeb.
-                        </p>
-                        <button
-                            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
-                            Skontaktuj się z nami
-                        </button>
-                    </div>
                 </div>
             </div>
         </section>

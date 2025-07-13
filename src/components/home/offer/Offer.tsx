@@ -69,13 +69,13 @@ export default function Offer() {
                             key={service.id}
                             className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                         >
-                            <div className="bg-blue-100 text-blue-600 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                            <div className="bg-sky-100 text-sky-700 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
                                 {service.icon}
                             </div>
                             <h3 className="text-xl font-semibold text-gray-900 mb-4">
                                 {service.title}
                             </h3>
-                            <p className="text-gray-600">
+                            <p className="text-gray-700 text-justify">
                                 {service.description}
                             </p>
                         </div>

@@ -154,8 +154,8 @@ export default function ClientsSlider() {
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                             Nasi Klienci
                         </h2>
-                        <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-                        <p className="text-lg text-gray-600">
+                        <div className="w-24 h-1 bg-sky-700 mx-auto mb-6"></div>
+                        <p className="text-lg text-gray-700">
                             Zaufały nam wiodące firmy z różnych branż
                         </p>
                     </div>
@@ -192,14 +192,14 @@ export default function ClientsSlider() {
     const visibleClients = getVisibleClients()
 
     return (
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                         Nasi Klienci
                     </h2>
-                    <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-                    <p className="text-lg text-gray-600">
+                    <div className="w-24 h-1 bg-sky-700 mx-auto mb-6"></div>
+                    <p className="text-lg text-gray-700">
                         Zaufały nam wiodące firmy z różnych branż
                     </p>
                 </div>
@@ -260,7 +260,7 @@ export default function ClientsSlider() {
                             onClick={() => setCurrentIndex(index)}
                             className={`h-2 rounded-full transition-all duration-300 ${
                                 currentIndex === index
-                                    ? 'bg-blue-600 w-8'
+                                    ? 'bg-sky-700 w-8'
                                     : 'bg-gray-300 w-2 hover:bg-gray-400'
                             }`}
                         />
