@@ -60,8 +60,8 @@ export default function Navbar() {
                                 <span className="absolute bottom-0 left-3 w-0 h-0.5 bg-gradient-to-r from-cyan-600 to-sky-700 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
                             </Link>
                             <Link
-                                href="/contact"
-                                className="bg-cyan-600 text-white hover:bg-gradient-to-r from-cyan-600 to-sky-700 px-4 py-2 rounded-md text-md font-medium transition duration-300 ease-linear"
+                                href="/kontakt"
+                                className="bg-cyan-600 text-white px-4 py-2 rounded-md text-md font-medium transition-all duration-300 transform hover:text-sky-50 hover:bg-gradient-to-r from-cyan-600 to-sky-700 hover:scale-105"
                             >
                                 Zadzwoń
                             </Link>
@@ -131,7 +131,7 @@ export default function Navbar() {
                         ))}
 
                         <Link
-                            href="/contact"
+                            href="/kontakt"
                             className={`bg-gradient-to-r from-cyan-600 to-sky-700 text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium mx-3 transition-all duration-300 transform hover:scale-105 ${
                                 isOpen ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
                             }`}

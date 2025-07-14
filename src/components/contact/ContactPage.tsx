@@ -61,7 +61,7 @@ export default function ContactPage() {
         <div className="min-h-screen bg-white">
             <Navbar />
             {/* Hero Section */}
-            <section className="bg-gradient-to-r from-sky-500 to-cyan-600 text-white py-20">
+            <section className="bg-gradient-to-r from-cyan-600 to-sky-700 text-white py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
                         <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -298,7 +298,7 @@ export default function ContactPage() {
                                         <button
                                             type="submit"
                                             disabled={isSubmitting}
-                                            className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105"
+                                            className="w-full bg-cyan-600 py-4 px-6 rounded-lg font-semibold hover:bg-gradient-to-r from-cyan-600 to-sky-700 text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105"
                                         >
                                             {isSubmitting ? (
                                                 <div className="flex items-center justify-center">

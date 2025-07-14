@@ -26,10 +26,10 @@ export default function Footer() {
                         <h4 className="font-semibold mb-4">Firma</h4>
                         <ul className="space-y-2 text-gray-400">
                             <li>
-                                <a href="/about" className="hover:text-white">O nas</a>
+                                <a href="/o-firmie" className="hover:text-white">O nas</a>
                             </li>
-                            <li><Link href="/contact" className="hover:text-white">Kontakt</Link></li>
-                            <li><a href="#" className="hover:text-white">Portfolio</a></li>
+                            <li><Link href="/kontakt" className="hover:text-white">Kontakt</Link></li>
+                            <li><a href="/#portfolio" className="hover:text-white">Portfolio</a></li>
                         </ul>
                     </div>
                     <div>
