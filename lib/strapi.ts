@@ -127,7 +127,10 @@ export const strapiApi = {
     async getPosts(): Promise<StrapiResponse<Post[]>> {
         try {
             const response = await api.get('/posts?populate=*')
-            console.log('getPosts response:', response.data)
+            console.log('getPosts response:', response.data);
+            (response.data.data as Post[]).forEach((post: Post) => {
+                console.dir(post.featured_image, { depth: null });
+            });
             return {
                 data: response.data.data || [],
                 meta: response.data.meta || {}
