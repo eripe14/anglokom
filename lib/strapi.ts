@@ -128,6 +128,7 @@ export const strapiApi = {
         try {
             const response = await api.get('/posts?populate=*')
             console.log('getPosts response:', response.data);
+            console.timeLog("#### getPosts response time ####");
             (response.data.data as Post[]).forEach((post: Post) => {
                 console.dir(post.featured_image, { depth: null });
             });
