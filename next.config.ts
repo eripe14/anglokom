@@ -2,12 +2,11 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
     images: {
-        domains: ['localhost'],
-        // Alternative: use remotePatterns for more specific control
+        domains: ['45.11.229.41'],
         remotePatterns: [
             {
                 protocol: 'http',
-                hostname: 'localhost',
+                hostname: '45.11.229.41',
                 port: '1337',
                 pathname: '/uploads/**',
             },
