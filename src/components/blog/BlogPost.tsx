@@ -48,7 +48,6 @@ export default function BlogPost({ post, variant = 'card' }: BlogPostProps) {
     if (variant === 'full') {
         return (
             <article className="max-w-4xl mx-auto">
-                {/* Status wpisu */}
                 {!isPublished && (
                     <div className="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded mb-6">
                         <strong>Szkic:</strong> Ten wpis nie został jeszcze opublikowany
