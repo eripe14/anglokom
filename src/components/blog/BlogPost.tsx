@@ -57,11 +57,11 @@ export default function BlogPost({ post, variant = 'card' }: BlogPostProps) {
                 {/* Obrazek wyróżniający */}
                 {imageUrl && (
                     <div className="relative w-full h-64 md:h-96 mb-8 rounded-lg overflow-hidden">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
+                        <Image
                             src={imageUrl}
                             alt={title}
-                            className="object-cover w-full h-full"
+                            fill
+                            className="object-cover"
                         />
                     </div>
                 )}
