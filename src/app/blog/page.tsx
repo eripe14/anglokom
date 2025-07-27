@@ -1,7 +1,7 @@
 import {strapiApi} from '@/../lib/strapi'
 import BlogPost from '@/components/blog/BlogPost'
 import Link from "next/link"
-import {Suspense} from 'react'
+import React, {Suspense} from 'react'
 import Navbar from "@/components/header/Navbar";
 import Footer from "@/components/footer/Footer";
 

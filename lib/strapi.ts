@@ -147,7 +147,7 @@ export const strapiApi = {
     async getPost(slug: string): Promise<Post | null> {
         try {
             const response = await api.get(`/posts?filters[slug][$eq]=${slug}&populate=*`)
-            console.log('getPost response:', response.data)
+            console.dir(response.data.data[0]?.featured_image, { depth: null });
             return response.data.data[0] || null
         } catch (error: unknown) {
             if (axios.isAxiosError(error)) {
