@@ -16,7 +16,7 @@ export default function Hero() {
             ([entry]) => {
                 if (entry.isIntersecting && !isVisible) {
                     setIsVisible(true)
-                    setClientCount(50);
+                    setClientCount(100);
                     setYearsOfExperience(20);
                 }
             },
@@ -68,10 +68,7 @@ export default function Hero() {
                         description={[
                             "Kompleksowe wsparcie językowe: szkolenia ogólne i branżowe, audyty kompetencji, tłumaczenia i korekty.",
                             "Przygotowujemy do egzaminów: ósmoklasisty, maturalnych oraz językowych (zgodnie ze standardami CEFR).",
-                            "Wykorzystujemy realne materiały egzaminacyjne oraz praktyczne scenariusze biznesowe.",
                             "Programy szyte na miarę – dostosowane do branży, poziomu i celów uczestników.",
-                            "Specjalizujemy się w komunikacji międzykulturowej: negocjacjach, prezentacjach, konwersacjach.",
-                            "Uwzględniamy różnice kulturowe i pragmatyczne – pracujemy metodą case studies, testów i warsztatów.",
                             "Szkolenia prowadzimy online, stacjonarnie oraz w siedzibie klienta – elastycznie, zgodnie z potrzebami.",
                             "Naszą siłą jest doświadczony i życzliwy zespół lektorów – ekspertów w nauczaniu języków obcych, z wykształceniem filologicznym i przygotowaniem pedagogicznym."
                         ]}
@@ -104,8 +101,8 @@ export default function Hero() {
                                     <div className="text-gray-700 text-md">Lat doświadczenia</div>
                                 </div>
                             </div>,
-                            "Naszą misją jest łączenie wiedzy językowej z praktycznymi umiejętnościami komunikacyjnymi - tak, by tworzyć realną wartość dla klientów.",
-                            "Stawiamy na komunikację międzykulturową i klarowność przekazu - bo to one decydują o efektywności współpracy.",
+                            "Naszą misją jest łączenie wiedzy językowej z praktycznymi umiejętnościami komunikacyjnymi - tak, by zapewnić najlepszą i personalizowaną jakość dla klienta.",
+                            "Stawiamy na komunikację i klarowność przekazu - bo to one decydują o efektywności współpracy.",
                             "Współpracujemy z firmami, instytucjami i klientami indywidualnymi – w Polsce i za granicą."
                         ]}
                         buttonText="Dowiedz się o nas więcej"
