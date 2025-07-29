@@ -62,7 +62,7 @@ export default function ContactPage() {
             <Navbar />
             {/* Hero Section */}
             <section className="bg-gradient-to-r from-cyan-600 to-sky-700 text-white py-16">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
                         <h1 className="text-4xl md:text-6xl font-bold mb-6">
                             Skontaktuj się z nami
@@ -77,7 +77,7 @@ export default function ContactPage() {
 
             {/* Contact Section */}
             <section className="py-20">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-16">
                         {/* Contact Information */}
                         <div>

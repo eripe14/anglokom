@@ -9,61 +9,54 @@ export default function Navbar() {
 
     return (
         <nav className="bg-white shadow-lg sticky top-0 z-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-16">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between items-center text-lg h-20">
                     <Logo />
 
                     {/* Desktop Menu */}
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4">
                             <Link
-                                href="/"
-                                className="text-gray-700 hover:text-sky-700 px-3 py-2 text-md font-medium transition-colors duration-300 relative group"
-                            >
-                                Strona Główna
-                                <span
-                                    className="absolute bottom-0 left-3 w-0 h-0.5 bg-gradient-to-r from-cyan-600 to-sky-700 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
-                            </Link>
-                            <Link
                                 href="/o-firmie"
-                                className="text-gray-700 hover:text-sky-700 px-3 py-2 text-md font-medium transition-colors duration-300 relative group"
+                                className="text-gray-700 hover:text-sky-700 px-3 py-3 text-md font-medium transition-colors duration-300 relative group"
                             >
                                 O firmie
                                 <span className="absolute bottom-0 left-3 w-0 h-0.5 bg-gradient-to-r from-cyan-600 to-sky-700 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
                             </Link>
                             <Link
                                 href="/oferta"
-                                className="text-gray-700 hover:text-sky-700 px-3 py-2 text-md font-medium transition-colors duration-300 relative group"
+                                className="text-gray-700 hover:text-sky-700 px-3 py-3 text-md font-medium transition-colors duration-300 relative group"
                             >
-                                Oferta szkoleń
+                                Nasza oferta
                                 <span className="absolute bottom-0 left-3 w-0 h-0.5 bg-gradient-to-r from-cyan-600 to-sky-700 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
                             </Link>
                             <Link
                                 href="/biuro-tlumaczen"
-                                className="text-gray-700 hover:text-sky-700 px-3 py-2 text-md font-medium transition-colors duration-300 relative group"
+                                className="text-gray-700 hover:text-sky-700 px-3 py-3 text-md font-medium transition-colors duration-300 relative group"
                             >
                                 Biuro tłumaczeń
                                 <span className="absolute bottom-0 left-3 w-0 h-0.5 bg-gradient-to-r from-cyan-600 to-sky-700 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
                             </Link>
                             <Link
                                 href="/audyty"
-                                className="text-gray-700 hover:text-sky-700 px-3 py-2 text-md font-medium transition-colors duration-300 relative group"
+                                className="text-gray-700 hover:text-sky-700 px-3 py-3 text-md font-medium transition-colors duration-300 relative group"
                             >
                                 Audyty
                                 <span className="absolute bottom-0 left-3 w-0 h-0.5 bg-gradient-to-r from-cyan-600 to-sky-700 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
                             </Link>
                             <Link
                                 href="/blog"
-                                className="text-gray-700 hover:text-sky-700 px-3 py-2 text-md font-medium transition-colors duration-300 relative group"
+                                className="text-gray-700 hover:text-sky-700 px-3 py-3 text-md font-medium transition-colors duration-300 relative group"
                             >
                                 Blog
                                 <span className="absolute bottom-0 left-3 w-0 h-0.5 bg-gradient-to-r from-cyan-600 to-sky-700 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
                             </Link>
                             <Link
                                 href="/kontakt"
-                                className="bg-cyan-600 text-white px-4 py-2 rounded-md text-md font-medium transition-all duration-300 transform hover:text-sky-50 hover:bg-gradient-to-r from-cyan-600 to-sky-700 hover:scale-105"
+                                className="text-gray-700 hover:text-sky-700 px-3 py-3 text-md font-medium transition-colors duration-300 relative group"
                             >
-                                Zadzwoń
+                                Kontakt
+                                <span className="absolute bottom-0 left-3 w-0 h-0.5 bg-gradient-to-r from-cyan-600 to-sky-700 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
                             </Link>
                         </div>
                     </div>
@@ -109,7 +102,7 @@ export default function Navbar() {
                         {[
                             { href: '/', label: 'Strona Główna' },
                             { href: '/o-firmie', label: 'O firmie' },
-                            { href: '/oferta', label: 'Oferta szkoleń' },
+                            { href: '/oferta', label: 'Nasza oferta' },
                             { href: '/biuro-tlumaczen', label: 'Biuro tłumaczeń' },
                             { href: '/audyty', label: 'Audyty' },
                             { href: '/blog', label: 'Blog' }

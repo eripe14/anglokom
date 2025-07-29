@@ -73,7 +73,7 @@ export default function Slider() {
 
                         {/* Content */}
                         <div className="relative z-10">
-                            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center text-white">
+                            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center text-white">
                                 <h1 className="text-4xl md:text-6xl font-bold mb-6 opacity-0 animate-fade-in-up">
                                     {slide.title}
                                 </h1>

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function CallToAction() {
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <Reveal delay={400} animation="fadeIn">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
                     Gotowy na Współpracę?

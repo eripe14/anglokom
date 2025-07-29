@@ -19,7 +19,7 @@ export default function LandingPage() {
 
             <Hero/>
 
-            <Reveal delay={100}><About/></Reveal>
+            {/* <Reveal delay={100}><About/></Reveal> */}
 
             <Element name="offer-section"><Reveal delay={200} animation="slideLeft"> <Offer/> </Reveal> </Element>
 
