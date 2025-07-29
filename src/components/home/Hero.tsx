@@ -63,7 +63,7 @@ export default function Hero() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
                     {/* Section 2: Our Story & Stats */}
-                    <div className="bg-white backdrop-blur-sm rounded-xl p-8 text-gray-800 shadow-md">
+                    <div className="bg-white backdrop-blur-sm rounded-xl p-8 text-gray-800 shadow-xl">
                         <h3 className="text-2xl font-semibold mb-4">
                             Nasza Historia
                         </h3>
@@ -95,7 +95,7 @@ export default function Hero() {
                     </div>
 
                     {/* Section 4: Why Choose Us */}
-                    <div className="bg-white/20 backdrop-blur-sm rounded-xl p-8 border-white/20 border-2 shadow-md">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-xl p-8 border-white/20 border-2 shadow-lg">
                         <h4 className="text-2xl font-semibold mb-4">
                             Dlaczego warto nas wybrać?
                         </h4>
