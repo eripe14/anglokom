@@ -14,7 +14,7 @@ export default function HeroCard(HeroCardProps: HeroCardProps) {
     const { title, description, buttonText, buttonLink } = HeroCardProps;
 
     return (
-        <div className="bg-white backdrop-blur-sm rounded-xl p-8 border-white/15 border-2 shadow-lg h-full flex flex-col justify-between">
+        <div className="rounded-xl p-8 border-white/15 border-2 h-full flex flex-col justify-between shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
             <div>
                 <h3 className="text-2xl text-gray-800 font-semibold mb-4">{title}</h3>
                 {description.map((desc, index) => (
@@ -30,7 +30,7 @@ export default function HeroCard(HeroCardProps: HeroCardProps) {
             <div className="text-center mt-6">
                 <Link href={buttonLink}>
                     <button
-                        className="bg-transparent border-2 cursor-pointer border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all"
+                        className="bg-transparent border-2 cursor-pointer border-sky-700 text-sky-700 hover:bg-sky-700 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all"
                     >
                         {buttonText}
                     </button>

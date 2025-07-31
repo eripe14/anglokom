@@ -5,6 +5,7 @@ import React from "react";
 import GlobalNotification from "@/components/notification/GlobalNotification";
 import ClientOnlyWrapper from "@/components/ClienyOnlyWrapper";
 import CookieBanner from "@/components/cookies/CookieBanner";
+import {LanguageProvider} from "@/contexts/LanguageContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,7 +32,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <LanguageProvider>
+            {children}
+        </LanguageProvider>
         <CookieBanner />
       </body>
     </html>

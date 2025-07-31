@@ -37,13 +37,13 @@ export default function Hero() {
 
     return (
         <section className="bg-gradient-to-r from-cyan-600 to-sky-700 text-white">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
                 {/* Section 1: Main Hero */}
                 <div className="text-center mb-16">
                     <h1 className="text-3xl md:text-5xl font-bold mb-6">
                         Komunikacja językowa, która buduje przewagę w biznesie.
                     </h1>
-                    <h2 className="text-xl md:text-2xl mb-8 text-sky-50">
+                    <h2 className="text-xl md:text-2xl mb-14 text-sky-50">
                         Szkolenia, audyty, tłumaczenia i przygotowanie do egzaminów - dla firm i osób indywidualnych.
                     </h2>
                     <div className="space-x-4">
@@ -62,53 +62,7 @@ export default function Hero() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <HeroCard
-                        title="Dlaczego warto nas wybrać?"
-                        description={[
-                            "Kompleksowe wsparcie językowe: szkolenia ogólne i branżowe, audyty kompetencji, tłumaczenia i korekty.",
-                            "Przygotowujemy do egzaminów: ósmoklasisty, maturalnych oraz językowych (zgodnie ze standardami CEFR).",
-                            "Programy szyte na miarę – dostosowane do branży, poziomu i celów uczestników.",
-                            "Szkolenia prowadzimy online, stacjonarnie oraz w siedzibie klienta – elastycznie, zgodnie z potrzebami.",
-                            "Naszą siłą jest doświadczony i życzliwy zespół lektorów – ekspertów w nauczaniu języków obcych, z wykształceniem filologicznym i przygotowaniem pedagogicznym."
-                        ]}
-                        buttonText="Sprawdź korzyści"
-                        buttonLink="/oferta"
-                    />
 
-                    <HeroCard
-                        title="Nasza historia"
-                        description={[
-                            "Od ponad dwóch dekad wspieramy firmy i osoby prywatne w skutecznej komunikacji językowej.",
-                            "Zaczynaliśmy jako lokalna firma - dziś działamy w całej Polsce, oferując szkolenia na najwyższym poziomie.",
-                            <div key="counter" ref={ref} className="grid grid-cols-2 gap-4 mt-2 mb-2">
-                                <div className="text-center">
-                                    <NumberFlow
-                                        className="text-3xl font-bold text-gray-700 mb-2"
-                                        value={clientCount}
-                                        suffix="+"
-                                        spinTiming={{duration: 3000, easing: 'ease-in-out'}}
-                                    />
-                                    <div className="text-gray-700 text-md">Zadowolonych Klientów</div>
-                                </div>
-                                <div className="text-center">
-                                    <NumberFlow
-                                        className="text-3xl font-bold text-gray-700 mb-2"
-                                        value={yearsOfExperience}
-                                        suffix="+"
-                                        spinTiming={{duration: 3000, easing: 'ease-in-out'}}
-                                    />
-                                    <div className="text-gray-700 text-md">Lat doświadczenia</div>
-                                </div>
-                            </div>,
-                            "Naszą misją jest łączenie wiedzy językowej z praktycznymi umiejętnościami komunikacyjnymi - tak, by zapewnić najlepszą i personalizowaną jakość dla klienta.",
-                            "Stawiamy na komunikację i klarowność przekazu - bo to one decydują o efektywności współpracy.",
-                            "Współpracujemy z firmami, instytucjami i klientami indywidualnymi – w Polsce i za granicą."
-                        ]}
-                        buttonText="Dowiedz się o nas więcej"
-                        buttonLink="/o-firmie"
-                    ></HeroCard>
-                </div>
             </div>
         </section>
     )
