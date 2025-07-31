@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import {ArrowLeft, Clock, Users, MapPin, Award, CheckCircle, GraduationCap, Star} from 'lucide-react';
 import {TrainingDetail, ContentSection} from "@/components/offer/training/detail/TrainingDetail";
-import Navbar from "@/components/header/Navbar";
+import Navbar from "@/components/header/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 
 interface TrainingDetailPageProps {

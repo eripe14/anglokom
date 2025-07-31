@@ -41,7 +41,7 @@ export default function MaturaExamTrainingOffer() {
     ];
 
     return (
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white" id="kursy-maturalne">
             <div className="container mx-auto px-6">
                 <OfferSectionHeader
                     title="Kursy maturalne"

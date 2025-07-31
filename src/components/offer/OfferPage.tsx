@@ -3,7 +3,7 @@ import LanguageTrainingOffer from "@/components/offer/training/LanguageTrainingO
 import BusinessTrainingOffer from "@/components/offer/training/BusinessTrainingOffer";
 import CallToAction from "@/components/offer/CallToAction";
 import Features from "@/components/offer/Features";
-import Navbar from "@/components/header/Navbar";
+import Navbar from "@/components/header/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import MaturaExamTrainingOffer from "@/components/offer/training/MaturaExamTrainingOffer";
 import Reveal from "@/components/animations/Reveal";

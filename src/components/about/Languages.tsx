@@ -1,20 +1,23 @@
-import Image from "next/image";
-
-const languages = [
-    { name: "język angielski", flag: "uk" },
-    { name: "język hiszpański", flag: "es" },
-    { name: "język niemiecki", flag: "de" },
-    { name: "język rosyjski", flag: "ru" },
-    { name: "język ukraiński", flag: "ua" },
-    { name: "język francuski", flag: "fr" },
-    { name: "język chiński", flag: "cr" },
-    { name: "język włoski", flag: "it" },
-];
+import {useLanguage} from "@/contexts/LanguageContext";
+import React from "react";
 
 export default function Languages() {
+    const { t } = useLanguage();
+
+    const languages = [
+        { flag: "uk" },
+        { flag: "es" },
+        { flag: "de" },
+        { flag: "ru" },
+        { flag: "ua" },
+        { flag: "fr" },
+        { flag: "cr" },
+        { flag: "it" },
+    ];
+
     return (
         <div className="bg-white rounded-2xl shadow-xl p-8 h-full">
-            <h3 className="text-4xl font-bold text-gray-800 mb-6">Nasze języki</h3>
+            <h3 className="text-4xl font-bold text-gray-800 mb-6">{t('about.languages.title')}</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
                 {languages.map((lang, index) => (
                     <div
@@ -25,10 +28,10 @@ export default function Languages() {
                             <img
                                 className="w-full h-full object-cover"
                                 src={`/images/flags/${lang.flag}-fl.png`}
-                                alt={`Anglokom | ${lang.name}`}
+                                alt={`Anglokom | ${t('about.languages.' + lang.flag)}`}
                             />
                         </div>
-                        <span className="text-gray-700 font-medium text-sm leading-tight">{lang.name}</span>
+                        <span className="text-gray-700 font-medium text-sm leading-tight">{t('about.languages.' + lang.flag)}</span>
                     </div>
                 ))}
             </div>

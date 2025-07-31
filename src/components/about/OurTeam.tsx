@@ -10,9 +10,9 @@ export default function OurTeam() {
                 {t('about.team.title')}
             </h2>
 
-            <div className="space-y-6 text-gray-600 leading-relaxed">
+            <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p className="text-justify mb-2">{t('about.team.paragraph.one')}</p>
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-2">
                     <li className="flex items-start group">
                         <div
                             className="flex-shrink-0 w-2 h-2 bg-gradient-to-r from-cyan-600 to-sky-700 rounded-full mt-2.5 mr-4 group-hover:scale-125 transition-transform duration-300"></div>

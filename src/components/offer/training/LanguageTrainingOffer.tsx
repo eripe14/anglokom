@@ -41,10 +41,10 @@ export default function LanguageTrainingOffer() {
     ];
 
     return (
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white" id="szkolenia-jezykowe">
             <div className="container mx-auto px-6">
                 <OfferSectionHeader
-                    title="Szkolenia Językowe"
+                    title="Szkolenia językowe"
                     subtitle="Profesjonalne kursy językowe dostosowane do Twoich potrzeb i celów"
                     icon={<Languages size={32} />}
                 />

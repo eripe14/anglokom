@@ -1,15 +1,15 @@
 'use client'
 
 import React from 'react';
-import Navbar from "@/components/header/Navbar";
+import Navbar from "@/components/header/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import OurTeamSection from "@/components/about/OurTeam";
 import LanguagesSection from "@/components/about/Languages";
-import ServicesSection from "@/components/about/service/Services";
 import SpecializationsSection from "@/components/about/Specializations";
 import CoverageSection from "@/components/about/Coverage";
 import Hero from "@/components/about/Hero";
 import Reveal from "@/components/animations/Reveal";
+import Mission from "@/components/about/Mission";
 
 const AboutPage = () => {
     return (
@@ -25,8 +25,7 @@ const AboutPage = () => {
                     <Reveal delay={200} animation="slideLeft"><OurTeamSection /></Reveal>
                     <Reveal delay={200} animation="slideRight"><LanguagesSection /></Reveal>
                 </div>
-
-                <Reveal delay={300} animation="scale"><ServicesSection /></Reveal>
+                <Reveal delay={200} animation="scale"><Mission /></Reveal>
                 <Reveal delay={200} animation="scale"><SpecializationsSection /></Reveal>
                 <Reveal delay={300} animation="scale"><CoverageSection /></Reveal>
             </div>

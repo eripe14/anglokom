@@ -1,6 +1,6 @@
 'use client';
 
-import Navbar from '../header/Navbar'
+import Navbar from '../header/navbar/Navbar'
 import Hero from './hero/Hero'
 import About from './About'
 import Offer from './Offer'

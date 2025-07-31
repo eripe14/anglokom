@@ -2,12 +2,8 @@
 
 import React, {useState, useEffect, useRef} from 'react'
 import {Link as ScrollLink} from 'react-scroll';
-import NumberFlow from "@number-flow/react";
-import HeroCard from "@/components/home/hero/HeroCard";
 
 export default function Hero() {
-    const [clientCount, setClientCount] = useState(0)
-    const [yearsOfExperience, setYearsOfExperience] = useState(0)
     const [isVisible, setIsVisible] = useState(false)
     const ref = useRef<HTMLDivElement>(null)
 
@@ -16,8 +12,6 @@ export default function Hero() {
             ([entry]) => {
                 if (entry.isIntersecting && !isVisible) {
                     setIsVisible(true)
-                    setClientCount(100);
-                    setYearsOfExperience(20);
                 }
             },
             {threshold: 0.1}
@@ -38,7 +32,6 @@ export default function Hero() {
     return (
         <section className="bg-gradient-to-r from-cyan-600 to-sky-700 text-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
-                {/* Section 1: Main Hero */}
                 <div className="text-center mb-16">
                     <h1 className="text-3xl md:text-5xl font-bold mb-6">
                         Komunikacja językowa, która buduje przewagę w biznesie.
@@ -61,8 +54,6 @@ export default function Hero() {
                         </ScrollLink>
                     </div>
                 </div>
-
-
             </div>
         </section>
     )

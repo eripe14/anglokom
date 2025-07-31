@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import React from "react";
-import GlobalNotification from "@/components/notification/GlobalNotification";
-import ClientOnlyWrapper from "@/components/ClienyOnlyWrapper";
 import CookieBanner from "@/components/cookies/CookieBanner";
 import {LanguageProvider} from "@/contexts/LanguageContext";
 

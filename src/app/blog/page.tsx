@@ -2,7 +2,7 @@ import {strapiApi} from '@/../lib/strapi'
 import BlogPost from '@/components/blog/BlogPost'
 import Link from "next/link"
 import React, {Suspense} from 'react'
-import Navbar from "@/components/header/Navbar";
+import Navbar from "@/components/header/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 
 // Loading component

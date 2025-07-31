@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import Navbar from '../header/Navbar'
+import Navbar from '../header/navbar/Navbar'
 import Footer from '../footer/Footer'
 
 export default function ContactPage() {
