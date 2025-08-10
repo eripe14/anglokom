@@ -30,7 +30,7 @@ export default function Hero() {
     }, [isVisible])
 
     return (
-        <section className="bg-gradient-to-r from-cyan-600 to-sky-700 text-white">
+        <section className="bg-gradient-to-r from-cyan-600 to-sky-700 text-white relative overflow-hidden">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
                 <div className="text-center mb-16">
                     <h1 className="text-3xl md:text-5xl font-bold mb-6">
@@ -55,6 +55,10 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
+            <div
+                className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-48 translate-x-48"></div>
+            <div
+                className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full translate-y-32 -translate-x-32"></div>
         </section>
     )
 }

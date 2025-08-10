@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import NumberFlow from "@number-flow/react";
-import HeroCard from "@/components/home/hero/HeroCard";
+import AboutCard from "@/components/home/AboutCard";
 
 export default function About() {
     const [clientCount, setClientCount] = useState(0)
@@ -15,7 +15,7 @@ export default function About() {
             ([entry]) => {
                 if (entry.isIntersecting && !isVisible) {
                     setIsVisible(true)
-                    setClientCount(50);
+                    setClientCount(100);
                     setYearsOfExperience(25);
                 }
             },
@@ -38,7 +38,7 @@ export default function About() {
         <section className="py-14">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <HeroCard
+                    <AboutCard
                         title="Dlaczego warto nas wybrać?"
                         description={[
                             "Kompleksowe wsparcie językowe: szkolenia ogólne i branżowe, audyty kompetencji, tłumaczenia i korekty.",
@@ -51,7 +51,7 @@ export default function About() {
                         buttonLink="/oferta"
                     />
 
-                    <HeroCard
+                    <AboutCard
                         title="Nasza historia"
                         description={[
                             "Od ponad dwóch dekad wspieramy firmy i osoby prywatne w skutecznej komunikacji językowej.",
@@ -62,7 +62,7 @@ export default function About() {
                                         className="text-3xl font-bold text-sky-700 mb-2"
                                         value={clientCount}
                                         suffix="+"
-                                        spinTiming={{duration: 3000, easing: 'ease-in-out'}}
+                                        spinTiming={{duration: 3500, easing: 'ease-in-out'}}
                                     />
                                     <div className="text-gray-700 text-md">Zadowolonych Klientów</div>
                                 </div>
@@ -82,7 +82,7 @@ export default function About() {
                         ]}
                         buttonText="Dowiedz się o nas więcej"
                         buttonLink="/o-firmie"
-                    ></HeroCard>
+                    ></AboutCard>
                 </div>
             </div>
         </section>

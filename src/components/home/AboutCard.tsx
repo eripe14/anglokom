@@ -10,7 +10,7 @@ interface HeroCardProps {
     buttonLink: string
 }
 
-export default function HeroCard(HeroCardProps: HeroCardProps) {
+export default function AboutCard(HeroCardProps: HeroCardProps) {
     const { title, description, buttonText, buttonLink } = HeroCardProps;
 
     return (
