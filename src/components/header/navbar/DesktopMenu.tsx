@@ -66,9 +66,7 @@ export default function DesktopMenu({t}: { t: (key: string) => string }) {
                 </div>
 
                 {/* Language Toggle - separated for better visual hierarchy */}
-                <div className="border-l border-gray-300 pl-4">
-                    <LanguageToggle/>
-                </div>
+
             </div>
         </div>
     );

@@ -10,8 +10,8 @@ export default function MobileMenuButton({isOpen, setIsOpen, language, toggleLan
 }) {
     return (
         <div className="md:hidden flex items-center space-x-3">
-            {/* Mobile Language Toggle */}
-            <button
+            {/* Mobile Language Toggle
+             <button
                 onClick={toggleLanguage}
                 className="group relative flex items-center justify-center h-9 px-2.5 py-1.5
                            bg-gradient-to-r from-cyan-600 to-sky-700
@@ -25,7 +25,8 @@ export default function MobileMenuButton({isOpen, setIsOpen, language, toggleLan
                 <span className="text-xs font-medium uppercase tracking-wide">
                     {language}
                 </span>
-            </button>
+            </button>*/}
+
 
             {/* Hamburger Menu Button */}
             <button

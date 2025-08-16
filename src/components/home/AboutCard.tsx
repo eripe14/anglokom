@@ -16,7 +16,7 @@ export default function AboutCard(HeroCardProps: HeroCardProps) {
     return (
         <div className="rounded-xl p-8 border-white/15 border-2 h-full flex flex-col justify-between shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
             <div>
-                <h3 className="text-2xl text-gray-800 font-semibold mb-4">{title}</h3>
+                <h2 className="text-2xl text-gray-800 font-semibold mb-4">{title}</h2>
                 {description.map((desc, index) => (
                     typeof desc === 'string' ? (
                         <p key={index} className="text-gray-700 text-lg leading-relaxed text-justify">

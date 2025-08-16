@@ -12,19 +12,19 @@ const servicesData = [
     {
         id: 1,
         icon: <FaUsers className="w-8 h-8" />,
-        title: "Szkolenia i Tłumaczenia",
+        title: "Szkolenia i tłumaczenia",
         description: "Szeroka gama szkoleń i tłumaczeń językowych kierowanych do firm i osób prywatnych."
     },
     {
         id: 2,
         icon: <FaClipboardCheck className="w-8 h-8" />,
-        title: "Audyty Językowe",
+        title: "Audyty językowe",
         description: "Przeprowadzanie audytów językowych sprawdzających poziom biegłości językowej."
     },
     {
         id: 3,
         icon: <FaCogs className="w-8 h-8" />,
-        title: "Audyty Kompetencyjne",
+        title: "Audyty kompetencyjne",
         description: "Przeprowadzanie audytów kompetencyjnych."
     },
     {

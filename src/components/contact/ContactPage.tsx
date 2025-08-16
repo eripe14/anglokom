@@ -244,7 +244,7 @@ export default function ContactPage() {
                                         </div>
                                         <div>
                                             <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                                                Interesująca usługa
+                                                Wybierz usługę *
                                             </label>
                                             <select
                                                 id="service"
@@ -256,8 +256,9 @@ export default function ContactPage() {
                                                 <option value="">Wybierz usługę</option>
                                                 <option value="szkolenia-jezykowe">Szkolenia językowe</option>
                                                 <option value="szkolenia-biznesowe">Szkolenia biznesowe</option>
+                                                <option value="kursy-maturalne">Kursy maturalne</option>
                                                 <option value="tlumaczenia">Tłumaczenia</option>
-                                                <option value="kursy-online">Kursy online</option>
+                                                <option value="audyty">Audyty</option>
                                                 <option value="inne">Inne</option>
                                             </select>
                                         </div>

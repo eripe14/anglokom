@@ -8,7 +8,7 @@ export default function BusinessTrainingOffer() {
             cardTitle: "Szkolenia z komunikacji",
             cardDescription: "Rozwijaj umiejętności komunikacyjne i buduj lepsze relacje biznesowe",
             icon: <MessageSquare size={24} />,
-            tooltipTitle: "Komunikacja Biznesowa",
+            tooltipTitle: "Komunikacja biznesowa",
             tooltipDescription: "Szkolenia obejmują techniki skutecznej komunikacji interpersonalnej, prowadzenie prezentacji, negocjacje biznesowe, komunikację w zespole międzynarodowym oraz zarządzanie konfliktami. Praktyczne ćwiczenia i studia przypadków.",
             slug: "szkolenia-biznesowe/szkolenia-komunikacja"
         },
@@ -24,7 +24,7 @@ export default function BusinessTrainingOffer() {
             cardTitle: "Szkolenia metodyczne dla pedagogów",
             cardDescription: "Nowoczesne metody nauczania i rozwój kompetencji dydaktycznych",
             icon: <Award size={24} />,
-            tooltipTitle: "Rozwój Dydaktyczny",
+            tooltipTitle: "Rozwój dydaktyczny",
             tooltipDescription: "Specjalistyczne szkolenia dla nauczycieli i trenerów obejmujące nowoczesne metody dydaktyczne, wykorzystanie technologii w nauczaniu, zarządzanie grupą, ewaluację efektów kształcenia oraz tworzenie materiałów edukacyjnych.",
             slug: "szkolenia-biznesowe/szkolenia-pedagogow"
         }

@@ -10,7 +10,7 @@ export default function Footer() {
                         <p className="text-gray-400 text-justify">
                             ANGLOKOM powstał w 2000 roku jako firma zajmująca się organizacją
                             i prowadzeniem szkoleń językowych, biznesowych oraz tłumaczeń.
-                            Z biegiem czasu nasza oferta rozwinęła się i opiewa szeroką gamę
+                            Z biegiem czasu nasza oferta rozwinęła się i obejmuje szeroką gamę
                             usług skierowanych na komunikację biznesową i językową.
                         </p>
                     </div>

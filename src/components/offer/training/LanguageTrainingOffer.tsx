@@ -2,7 +2,6 @@ import React from 'react';
 import { Monitor, Languages, Building, MapPin, UserCheck } from 'lucide-react';
 import OfferSectionHeader from "@/components/offer/OfferSectionHeader";
 import OfferServiceCard from "@/components/offer/OfferServiceCard";
-import Footer from "@/components/footer/Footer";
 
 export default function LanguageTrainingOffer() {
     const languageServices = [
@@ -10,7 +9,7 @@ export default function LanguageTrainingOffer() {
             cardTitle: "Szkolenia językowe dla firm",
             cardDescription: "Dedykowane programy językowe dopasowane do specyfiki Twojej branży",
             icon: <Building size={24} />,
-            tooltipTitle: "Szkolenia Korporacyjne",
+            tooltipTitle: "Szkolenia korporacyjne",
             tooltipDescription: "Organizujemy szkolenia językowe bezpośrednio w siedzibie Twojej firmy lub w naszych nowoczesnych salach. Programy są dostosowane do branży i poziomu zaawansowania uczestników, z możliwością prowadzenia zajęć w godzinach pracy lub po jej zakończeniu.",
             slug: "szkolenia-jezykowe/szkolenia-dla-firm"
         },
@@ -26,7 +25,7 @@ export default function LanguageTrainingOffer() {
             cardTitle: "Szkolenia dla obcokrajowców",
             cardDescription: "Specjalistyczne kursy języka polskiego i integracji kulturowej",
             icon: <UserCheck size={24} />,
-            tooltipTitle: "Integracja Językowa",
+            tooltipTitle: "Integracja językowa",
             tooltipDescription: "Kompleksowe programy nauki języka polskiego dla pracowników z zagranicy. Obejmują nie tylko naukę języka, ale także elementy kultury polskiej, procedur administracyjnych i komunikacji w środowisku zawodowym.",
             slug: "szkolenia-jezykowe/szkolenia-dla-obcokrajowcow"
         },
