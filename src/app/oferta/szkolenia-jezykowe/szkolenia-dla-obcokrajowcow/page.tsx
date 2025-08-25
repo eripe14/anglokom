@@ -5,7 +5,7 @@ import TrainingDetailPage from "@/components/offer/training/detail/TrainingDetai
 export default function ForeignerLanguageCourse() {
     const trainingData: TrainingDetail = {
         title: "Język polski dla obcokrajowców",
-        subtitle: "Zajęcia języka polskiego jako obcego dla osób z zagranicy",
+        subtitle: "Zajęcia z języka polskiego jako obcego dla osób z zagranicy",
         description: "Prowadzimy profesjonalne kursy języka polskiego dla obcokrajowców w oparciu o metodę komunikacyjną i bezpośrednią. Kładziemy nacisk na rozwój umiejętności mówienia i rozumienia języka w kontekście sytuacyjnym. Zajęcia prowadzone są przez doświadczonych lektorów posługujących się wieloma językami obcymi.",
         icon: <Globe size={48} />,
         features: [
@@ -35,12 +35,13 @@ export default function ForeignerLanguageCourse() {
                     type: "list",
                     content: [
                         "Angielski (English)",
+                        "Hiszpański (Español)",
                         "Niemiecki (Deutsch)",
                         "Rosyjski (Русский)",
                         "Ukraiński (Українська)",
-                        "Włoski (Italiano)",
                         "Francuski (Français)",
-                        "Hiszpański (Español)"
+                        "Chiński (中文)",
+                        "Włoski (Italiano)"
                     ]
                 },
                 {
@@ -51,13 +52,13 @@ export default function ForeignerLanguageCourse() {
                 {
                     title: "Kontakt",
                     type: "text",
-                    content: `Aby uzyskać szczegółowe informacje dotyczące harmonogramu, poziomu i formy zajęć, prosimy o wypełnienie formularza kontaktowego. Nasz zespół przygotuje indywidualną ofertę dopasowaną do Twoich potrzeb językowych.`
+                    content: `Aby uzyskać szczegółowe informacje dotyczące harmonogramu, poziomu i formy zajęć, prosimy o wypełnienie formularza kontaktowego lub kontakt telefoniczny. Nasz zespół przygotuje indywidualną ofertę dopasowaną do Twoich potrzeb językowych.`
                 }
             ]
         },
         cta: {
             primaryButton: "Skontaktuj się z nami",
-            primaryButtonLink: "/contact",
+            primaryButtonLink: "/kontakt",
             secondaryButton: "Pobierz broszurę informacyjną",
         }
     };

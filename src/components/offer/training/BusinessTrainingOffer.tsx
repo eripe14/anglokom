@@ -8,24 +8,18 @@ export default function BusinessTrainingOffer() {
             cardTitle: "Szkolenia z komunikacji",
             cardDescription: "Rozwijaj umiejętności komunikacyjne i buduj lepsze relacje biznesowe",
             icon: <MessageSquare size={24} />,
-            tooltipTitle: "Komunikacja biznesowa",
-            tooltipDescription: "Szkolenia obejmują techniki skutecznej komunikacji interpersonalnej, prowadzenie prezentacji, negocjacje biznesowe, komunikację w zespole międzynarodowym oraz zarządzanie konfliktami. Praktyczne ćwiczenia i studia przypadków.",
             slug: "szkolenia-biznesowe/szkolenia-komunikacja"
         },
         {
             cardTitle: "Wsparcie działów szkoleniowych",
             cardDescription: "Kompleksowe wsparcie dla wewnętrznych zespołów HR i szkoleń",
             icon: <TrendingUp size={24} />,
-            tooltipTitle: "Konsulting HR",
-            tooltipDescription: "Oferujemy wsparcie w projektowaniu systemów szkoleniowych, audytach potrzeb szkoleniowych, tworzeniu planów rozwoju kompetencji oraz implementacji programów szkoleniowych. Pomoc w budowaniu wewnętrznych akademii korporacyjnych.",
             slug: "szkolenia-biznesowe/wsparcie-hr"
         },
         {
             cardTitle: "Szkolenia metodyczne dla pedagogów",
             cardDescription: "Nowoczesne metody nauczania i rozwój kompetencji dydaktycznych",
             icon: <Award size={24} />,
-            tooltipTitle: "Rozwój dydaktyczny",
-            tooltipDescription: "Specjalistyczne szkolenia dla nauczycieli i trenerów obejmujące nowoczesne metody dydaktyczne, wykorzystanie technologii w nauczaniu, zarządzanie grupą, ewaluację efektów kształcenia oraz tworzenie materiałów edukacyjnych.",
             slug: "szkolenia-biznesowe/szkolenia-pedagogow"
         }
     ];

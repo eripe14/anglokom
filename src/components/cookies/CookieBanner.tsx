@@ -15,6 +15,12 @@ export default function CookieBanner() {
     const acceptCookies = () => {
         localStorage.setItem('cookies-accepted', 'true')
         setVisible(false)
+        window.gtag?.('consent','update', {
+            analytics_storage: 'granted',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+        })
     }
 
     if (!visible) return null

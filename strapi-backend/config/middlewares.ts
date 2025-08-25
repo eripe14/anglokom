@@ -11,7 +11,7 @@ export default [
     {
         name: 'strapi::cors',
         config: {
-            origin: ['https://kdronia.pl', 'http://localhost:3000'], // albo *
+            origin: ['https://anglokom.pl', 'http://localhost:3000'], // albo *
             methods: ['GET', 'POST', 'PUT', 'DELETE'],
             headers: '*',
         },

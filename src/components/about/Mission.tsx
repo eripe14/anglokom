@@ -10,6 +10,7 @@ export default function Mission() {
 
             <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p className="text-justify mb-2">{t('about.mission.paragraph.one')}</p>
+                {/*
                 <ul className="space-y-2 mb-2">
                     <li className="flex items-start group">
                         <div
@@ -23,6 +24,8 @@ export default function Mission() {
                     </li>
                 </ul>
                 <p className="text-justify">{t('about.mission.paragraph.two')}</p>
+                */}
+
             </div>
         </div>
     )

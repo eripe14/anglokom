@@ -1,8 +1,15 @@
 import { Building } from 'lucide-react';
 import {TrainingDetail} from "@/components/offer/training/detail/TrainingDetail";
 import TrainingDetailPage from "@/components/offer/training/detail/TrainingDetailPage";
+import {TRAININGS} from "@/data/trainings";
 
 export default function CompanyTraining() {
+    const gridItems = TRAININGS.map(t => ({
+        title: t.title,
+        description: t.description,
+        slug: t.slug,
+    }));
+
     const trainingData: TrainingDetail = {
         title: "Szkolenia językowe dla firm",
         subtitle: "Szkolenia językowe ogólne i \"szyte na miarę\" potrzeb klienta",
@@ -28,26 +35,20 @@ export default function CompanyTraining() {
                 {
                     title: "Zakres dostępnych szkoleń",
                     type: "grid",
-                    content: [
-                        { title: "INTERCULTURAL BUSINESS COMMUNICATION", description: "Komunikacja międzykulturowa w biznesie, negocjacje, prezentacje, konwersacje." },
-                        { title: "THE ART OF PRESENTATIONS", description: "Prezentacje publiczne w języku angielskim z analizą komunikacji werbalnej i niewerbalnej." },
-                        { title: "PRAGMATIC INTERCULTURAL DIFFERENCES", description: "Różnice kulturowe i pragmatyczne w komunikacji. Studium przypadków, testy, warsztaty." },
-                        { title: "CORPORATE CULTURE AND ITS INFLUENCE ON SUCCESSFUL BUSINESS", description: "Kultury organizacyjne, motywacja, komunikacja wewnętrzna, zarządzanie." },
-                        { title: "THE ART OF MOTIVATING", description: "Motywacja materialna i niematerialna, dopasowanie do typów osobowości." },
-                        { title: "TIME MANAGEMENT", description: "Zarządzanie czasem, asertywność, eliminacja dystraktorów." },
-                        { title: "ACCELERATING THE PROCESS OF FOREIGN LANGUAGE LEARNING", description: "Szybsze przyswajanie języka, analiza stylów uczenia się." },
-                        { title: "APTITUDE ASSESSMENT", description: "Indywidualna ocena predyspozycji językowych i strategii uczenia się." },
-                        { title: "ASSERTIVENESS IN BUSINESS", description: "Asertywność w negocjacjach i środowisku biznesowym." },
-                        { title: "INTERPERSONAL COMMUNICATION", description: "Komunikacja interpersonalna, aktywne słuchanie, błędy komunikacyjne." },
-                        { title: "CRISIS COMMUNICATION AND COMMUNICATION MANAGEMENT", description: "Komunikacja kryzysowa, zarządzanie informacją, ćwiczenia praktyczne." }
-                    ]
+                    href: "/oferta/szkolenia-jezykowe/szkolenia-dla-firm",
+                    content: gridItems,
                 }
             ]
         },
         cta: {
             primaryButton: "Skontaktuj się z nami",
-            primaryButtonLink: "/contact",
-            secondaryButton: "Pobierz program"
+            primaryButtonLink: "/kontakt",
+            secondaryButton: "Pobierz katalog wersja pełna",
+            secondaryButtonLink: "/downloads/ANGLOKOM_Oferta szkoleń_Kompetencje i komunikacja międzykulturowa_opis.docx",
+            secondaryDownloadFileName: "Katalog_szkolen_jezykowych.docx",
+            tertiaryButton: "Pobierz katalog wersja krótka",
+            tertiaryButtonLink: "/downloads/ANGLOKOM_Oferta szkoleń_Kompetencje i komunikacja międzykulturowa_short.pptx",
+            tertiaryDownloadFileName: "Katalog_szkolen_jezykowych_krotki.pptx"
         }
     };
 

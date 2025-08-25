@@ -154,7 +154,7 @@ export default function AuditsPage() {
                             {t('audits.cta.description')}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                            <Link href="/contact">
+                            <Link href="/kontakt">
                                 <button
                                     className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
                                     {t('audits.cta.contactButton')}

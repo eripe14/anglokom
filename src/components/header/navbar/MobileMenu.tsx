@@ -13,9 +13,11 @@ export default function MobileMenu({ isOpen, setIsOpen, t }: { isOpen: boolean; 
 
     const otherMenuItems = [
         { href: '/biuro-tlumaczen', label: t('nav.translations') || 'Biuro tłumaczeń' },
-        { href: '/audyty', label: t('nav.audits') || 'Audyty' },
-        { href: '/blog', label: t('nav.blog') || 'Blog' }
+        { href: '/audyty', label: t('nav.audits') || 'Audyty' }
+
     ];
+
+    {/*{ href: '/blog', label: t('nav.blog') || 'Blog' }*/}
 
     return (
         <div className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${

@@ -9,32 +9,24 @@ export default function LanguageTrainingOffer() {
             cardTitle: "Szkolenia językowe dla firm",
             cardDescription: "Dedykowane programy językowe dopasowane do specyfiki Twojej branży",
             icon: <Building size={24} />,
-            tooltipTitle: "Szkolenia korporacyjne",
-            tooltipDescription: "Organizujemy szkolenia językowe bezpośrednio w siedzibie Twojej firmy lub w naszych nowoczesnych salach. Programy są dostosowane do branży i poziomu zaawansowania uczestników, z możliwością prowadzenia zajęć w godzinach pracy lub po jej zakończeniu.",
             slug: "szkolenia-jezykowe/szkolenia-dla-firm"
         },
         {
             cardTitle: "Szkolenia językowe w Londynie",
             cardDescription: "Intensywne kursy językowe w sercu Wielkiej Brytanii",
             icon: <MapPin size={24} />,
-            tooltipTitle: "Kursy w Londynie",
-            tooltipDescription: "Oferujemy wyjątkową możliwość nauki języka angielskiego w naturalnym środowisku językowym. Programy obejmują zajęcia z native speakerami, wizyty studyjne w brytyjskich firmach oraz praktyczne wykorzystanie języka w codziennych sytuacjach.",
             slug: "szkolenia-jezykowe/szkolenia-londyn"
         },
         {
             cardTitle: "Szkolenia dla obcokrajowców",
             cardDescription: "Specjalistyczne kursy języka polskiego i integracji kulturowej",
             icon: <UserCheck size={24} />,
-            tooltipTitle: "Integracja językowa",
-            tooltipDescription: "Kompleksowe programy nauki języka polskiego dla pracowników z zagranicy. Obejmują nie tylko naukę języka, ale także elementy kultury polskiej, procedur administracyjnych i komunikacji w środowisku zawodowym.",
             slug: "szkolenia-jezykowe/szkolenia-dla-obcokrajowcow"
         },
         {
             cardTitle: "Szkolenia online",
             cardDescription: "Elastyczne kursy językowe dostępne z dowolnego miejsca",
             icon: <Monitor size={24} />,
-            tooltipTitle: "E-learning",
-            tooltipDescription: "Nowoczesne platformy e-learningowe umożliwiające naukę w dogodnym czasie i miejscu. Interaktywne materiały, sesje na żywo z lektorami, oraz możliwość śledzenia postępów w nauce. Idealne rozwiązanie dla osób z napiętym harmonogramem.",
             slug: "szkolenia-jezykowe/szkolenia-online"
         }
     ];

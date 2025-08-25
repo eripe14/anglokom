@@ -62,7 +62,7 @@ export default function LondonTraining() {
         },
         cta: {
             primaryButton: "Zarezerwuj kurs",
-            primaryButtonLink: "/contact",
+            primaryButtonLink: "/kontakt",
             secondaryButton: "Pobierz broszurę PDF"
         }
     };

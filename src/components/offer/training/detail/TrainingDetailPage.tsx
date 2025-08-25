@@ -4,12 +4,14 @@ import {ArrowLeft, Clock, Users, MapPin, Award, CheckCircle, GraduationCap, Star
 import {TrainingDetail, ContentSection} from "@/components/offer/training/detail/TrainingDetail";
 import Navbar from "@/components/header/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import { slugify } from "@/../lib/slugify";
 
 interface TrainingDetailPageProps {
     training: TrainingDetail;
+    backHref?: string;
 }
 
-export default function TrainingDetailPage({training}: TrainingDetailPageProps) {
+export default function TrainingDetailPage({training, backHref = "/oferta"}: TrainingDetailPageProps) {
     const renderContent = (section: ContentSection) => {
         switch (section.type) {
             case 'list':
@@ -26,12 +28,19 @@ export default function TrainingDetailPage({training}: TrainingDetailPageProps) 
             case 'grid':
                 return (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {(section.content as { title: string; description: string }[]).map((item, index) => (
-                            <div key={index} className="bg-gray-100 rounded-lg p-4 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                                <h4 className="font-semibold text-gray-800 text-lg mb-2">{item.title}</h4>
-                                <p className="text-gray-700 text-md text-justify">{item.description}</p>
-                            </div>
-                        ))}
+                        {(section.content as { title: string; description: string }[]).map((item, index) => {
+                            const slug = slugify(item.title);
+                            return (
+                                <Link
+                                    key={index}
+                                    href={`${section.href}/${slug}`}
+                                    className="block bg-gray-100 rounded-lg p-4 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                                >
+                                    <h4 className="font-semibold text-gray-800 text-lg mb-2">{item.title}</h4>
+                                    <p className="text-gray-700 text-md text-justify">{item.description}</p>
+                                </Link>
+                            );
+                        })}
                     </div>
                 );
             case 'custom':
@@ -98,7 +107,7 @@ export default function TrainingDetailPage({training}: TrainingDetailPageProps) 
             <div className="bg-gradient-to-r from-cyan-600 to-sky-700 text-white">
                 <div className="container mx-auto px-6 py-16">
                     <Link
-                        href="/oferta"
+                        href={backHref}
                         className="inline-flex items-center text-white text-2xl hover:text-white mb-6 transition-colors duration-300 group"
                     >
                         <ArrowLeft size={26} className="mr-2 group-hover:-translate-x-1 transition-transform"/>
@@ -157,7 +166,8 @@ export default function TrainingDetailPage({training}: TrainingDetailPageProps) 
 
                     {/* Sidebar */}
                     <div className="lg:col-span-1">
-                        <div className="bg-gray-100 rounded-xl p-6 top-6 shadow-lg hover:shadow-2xl duration-500 transition-shadow">
+                        <div
+                            className="bg-gray-100 rounded-xl p-6 top-6 shadow-lg hover:shadow-2xl duration-500 transition-shadow">
                             <h3 className="text-xl font-bold text-gray-800 mb-6">Szczegóły szkolenia</h3>
                             <div className="space-y-6">
                                 <div className="flex items-start">
@@ -202,31 +212,70 @@ export default function TrainingDetailPage({training}: TrainingDetailPageProps) 
                             </div>
 
                             <div className="mt-8 pt-6 border-t space-y-3">
-                                <Link
-                                    href={training.cta.primaryButtonLink || '/contact'}
-                                >
+
+                                {/* Primary (bez zmian) */}
+                                <Link href={training.cta.primaryButtonLink || "/kontakt"}>
                                     <button
                                         className="w-full bg-gradient-to-r from-cyan-600 to-sky-700 text-white py-3 px-6 my-5 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                                         {training.cta.primaryButton}
                                     </button>
                                 </Link>
-                                {training.cta.secondaryButton && (
-                                    <button
-                                        className="w-full border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300">
-                                        {training.cta.secondaryButton}
-                                    </button>
+
+                                {/* Secondary – tylko jeśli ustawiono nazwę i link */}
+                                {training.cta.secondaryButton && training.cta.secondaryButtonLink && (
+                                    training.cta.secondaryDownloadFileName ? (
+                                        // pobieranie z /public
+                                        <a
+                                            href={training.cta.secondaryButtonLink}
+                                            download={training.cta.secondaryDownloadFileName}
+                                            className="w-full border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 block text-center"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {training.cta.secondaryButton}
+                                        </a>
+                                    ) : (
+                                        // zwykła nawigacja
+                                        <Link href={training.cta.secondaryButtonLink}>
+                                            <button
+                                                className="w-full border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300">
+                                                {training.cta.secondaryButton}
+                                            </button>
+                                        </Link>
+                                    )
+                                )}
+
+                                {/* Tertiary – analogicznie, opcjonalny */}
+                                {training.cta.tertiaryButton && training.cta.tertiaryButtonLink && (
+                                    training.cta.tertiaryDownloadFileName ? (
+                                        <a
+                                            href={training.cta.tertiaryButtonLink}
+                                            download={training.cta.tertiaryDownloadFileName}
+                                            className="w-full border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 block text-center"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {training.cta.tertiaryButton}
+                                        </a>
+                                    ) : (
+                                        <Link href={training.cta.tertiaryButtonLink}>
+                                            <button
+                                                className="w-full border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300">
+                                                {training.cta.tertiaryButton}
+                                            </button>
+                                        </Link>
+                                    )
                                 )}
                             </div>
                         </div>
 
                         {/* Additional Info Card */}
-                        <div className="bg-gradient-to-r from-cyan-600 to-sky-700 text-white rounded-xl p-6 mt-6 shadow-lg hover:shadow-2xl duration-500 transition-shadow">
+                        <div
+                            className="bg-gradient-to-r from-cyan-600 to-sky-700 text-white rounded-xl p-6 mt-6 shadow-lg hover:shadow-2xl duration-500 transition-shadow">
                             <div className="flex items-center mb-4">
                                 <GraduationCap className="mr-3" size={24}/>
                                 <h4 className="text-lg font-bold">Dlaczego ANGLOKOM?</h4>
                             </div>
                             <ul className="space-y-2 text-md text-sky-50">
-                                <li>• Ponad 20 lat doświadczenia</li>
+                                <li>• Ponad 25 lat doświadczenia</li>
                                 <li>• Certyfikowani trenerzy</li>
                                 <li>• Autorskie materiały</li>
                                 <li>• Elastyczne terminy</li>
@@ -235,7 +284,7 @@ export default function TrainingDetailPage({training}: TrainingDetailPageProps) 
                     </div>
                 </div>
             </div>
-            <Footer />
+            <Footer/>
         </div>
     );
 }

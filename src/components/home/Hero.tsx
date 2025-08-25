@@ -33,8 +33,8 @@ export default function Hero() {
         <section className="bg-gradient-to-r from-cyan-600 to-sky-700 text-white relative overflow-hidden">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
                 <div className="text-center mb-16">
-                    <h1 className="text-3xl md:text-5xl font-bold mb-6">
-                        Komunikacja językowa, która buduje przewagę w biznesie.
+                    <h1 className="text-5xl md:text-7xl font-bold mb-6">
+                        Nowe możliwości, komunikacji językowej
                     </h1>
                     <h2 className="text-xl md:text-2xl mb-14 text-sky-50">
                         Szkolenia, audyty, tłumaczenia i przygotowanie do egzaminów - dla firm i osób indywidualnych.

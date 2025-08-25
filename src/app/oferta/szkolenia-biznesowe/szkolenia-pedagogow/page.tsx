@@ -28,6 +28,7 @@ export default function SzkoleniaMetodyczneDlaNauczycieli() {
                 {
                     title: "Moduły ogólne",
                     type: "grid",
+                    href: "/oferta/szkolenia-biznesowe/szkolenia-pedagogow",
                     content: [
                         {
                             title: "Metodyka języka angielskiego",
@@ -83,7 +84,7 @@ export default function SzkoleniaMetodyczneDlaNauczycieli() {
                         { time: "9:15–10:45", description: "Szkolenie" },
                         { time: "10:45–11:00", description: "Przerwa kawowa (napoje i ciasteczka)" },
                         { time: "11:00–12:30", description: "Szkolenie" },
-                        { time: "12:30–13:15", description: "Lunch (kurczak, ziemniaki, surówki)" },
+                        { time: "12:30–13:15", description: "Lunch" },
                         { time: "13:30–14:45", description: "Szkolenie" },
                         { time: "14:45–15:00", description: "Podsumowanie i zakończenie szkolenia" }
                     ]

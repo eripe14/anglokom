@@ -6,7 +6,21 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+
+    "seo:audit": "lighthouse --chrome-flags=\"--headless\" --output=html --output-path=./seo-reports/lighthouse-report.html https://anglokom.pl",
+    "seo:sitemap": "next build && curl -I https://anglokom.pl/sitemap.xml",
+    "seo:robots": "curl -I https://anglokom.pl/robots.txt",
+    "seo:meta": "node scripts/check-meta.js",
+    "seo:all": "npm run seo:meta && npm run build && npm run seo:sitemap && npm run seo:robots",
+
+    "// Performance Scripts": "",
+    "perf:bundle": "npx @next/bundle-analyzer",
+    "perf:analyze": "ANALYZE=true npm run build",
+    "perf:lighthouse": "lighthouse --chrome-flags=\"--headless\" --preset=perf --output=json --output-path=./seo-reports/performance.json https://anglokom.pl",
+
+    "// Local SEO testing": "",
+    "dev:seo": "next dev && open http://localhost:3000/sitemap.xml && open http://localhost:3000/robots.txt"
   },
   "dependencies": {
     "@number-flow/react": "^0.5.10",

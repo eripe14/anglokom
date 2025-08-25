@@ -28,6 +28,7 @@ export default function CommunicationTraining() {
                 {
                     title: "Zakres szkoleń",
                     type: "grid",
+                    href: "/oferta/szkolenia-biznesowe/szkolenia-komunikacja",
                     content: [
                         {
                             title: "Komunikacja interpersonalna",
