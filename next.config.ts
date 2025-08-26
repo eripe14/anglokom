@@ -4,7 +4,6 @@ const nextConfig: NextConfig = {
     compress: true,
     poweredByHeader: false,
 
-
     images: {
         formats: ['image/webp', 'image/avif'],
         deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -50,7 +49,7 @@ const nextConfig: NextConfig = {
                     },
                     {
                         key: 'Content-Security-Policy',
-                        value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.google-analytics.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' *.google-analytics.com *.analytics.google.com *.googletagmanager.com;"
+                        value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.google-analytics.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: https: http://45.11.229.41:1337; connect-src 'self' *.google-analytics.com *.analytics.google.com *.googletagmanager.com http://45.11.229.41:1337;"
                     }
                 ]
             },
@@ -83,9 +82,11 @@ const nextConfig: NextConfig = {
         ];
     },
 
-    // Experimental features dla lepszej wydajności
+    // POPRAWIONA sekcja experimental
     experimental: {
         optimizePackageImports: ['lucide-react'],
+        // Usunięto missingSuspenseWithCSRBailout - nie istnieje w Next.js 15
+        serverComponentsExternalPackages: [],
         turbo: {
             rules: {
                 '*.svg': {
@@ -96,7 +97,6 @@ const nextConfig: NextConfig = {
         }
     },
 
-    // Webpack optymalizacje
     webpack: (config, { isServer }) => {
         if (!isServer) {
             config.resolve.fallback = {
@@ -104,14 +104,10 @@ const nextConfig: NextConfig = {
                 fs: false,
             };
         }
-
         return config;
     },
 
-    // Output dla statycznych plików
     output: 'standalone',
-
-    // Trailing slash - ważne dla SEO
     trailingSlash: false,
 }
 

@@ -8,6 +8,7 @@ import {LanguageProvider} from "@/contexts/LanguageContext";
 import {getServerTranslations, getServerLanguage} from '@/../lib/translations-server';
 import GtagPageview from "@/components/analytics/GtagPageview";
 
+export const dynamic = 'force-dynamic';
 const geistSans = Geist({
     variable: "--font-geist-sans",
     subsets: ["latin"],
