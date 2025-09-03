@@ -34,7 +34,7 @@ export default function Hero() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
                 <div className="text-center mb-16">
                     <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                        Nowe możliwości, komunikacji językowej
+                        Nowe możliwości komunikacji językowej
                     </h1>
                     <h2 className="text-xl md:text-2xl mb-14 text-sky-50">
                         Szkolenia, audyty, tłumaczenia i przygotowanie do egzaminów - dla firm i osób indywidualnych.
