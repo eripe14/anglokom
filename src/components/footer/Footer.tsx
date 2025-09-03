@@ -55,6 +55,7 @@ export default function Footer() {
                 </div>
                 <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
                     <p>&copy; 2001-2025 Anglokom. Wszystkie prawa zastrzeżone.</p>
+                    <p className="mt-2">Strona została wykonana przez Karola Dronia.</p>
                 </div>
             </div>
         </footer>
