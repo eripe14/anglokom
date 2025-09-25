@@ -7,6 +7,7 @@ import Navbar from "@/components/header/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import MaturaExamTrainingOffer from "@/components/offer/training/MaturaExamTrainingOffer";
 import Reveal from "@/components/animations/Reveal";
+import EightGradeExamTrainingOffer from "@/components/offer/training/EightGradeExamTrainingOffer";
 
 export default function OfferPage() {
     return (
@@ -15,7 +16,8 @@ export default function OfferPage() {
             <Hero />
             <Reveal delay={250}><LanguageTrainingOffer /></Reveal>
             <Reveal delay={300} animation="slideLeft"><BusinessTrainingOffer /></Reveal>
-            <Reveal delay={300} animation="slideRight"><MaturaExamTrainingOffer /></Reveal>
+            <Reveal delay={300} animation="slideRight"><EightGradeExamTrainingOffer /></Reveal>
+            <Reveal delay={300} animation="slideLeft"><MaturaExamTrainingOffer /></Reveal>
             <Reveal delay={150}><Features /></Reveal>
             <Reveal delay={150}><CallToAction /></Reveal>
             <Footer />

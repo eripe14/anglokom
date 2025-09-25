@@ -32,23 +32,28 @@ export default function CommunicationTraining() {
                     content: [
                         {
                             title: "Komunikacja interpersonalna",
-                            description: "Typowe błędy komunikacyjne, aktywne słuchanie, efektywne zadawanie pytań. Praktyczne ćwiczenia rozwijające kompetencję komunikacyjną."
+                            description: "Typowe błędy komunikacyjne, aktywne słuchanie, efektywne zadawanie pytań. Praktyczne ćwiczenia rozwijające kompetencję komunikacyjną.",
+                            redirect: false
                         },
                         {
                             title: "Komunikacja międzykulturowa",
-                            description: "Różnice kulturowe w komunikacji biznesowej, przygotowanie do negocjacji i prezentacji z partnerami z różnych kultur."
+                            description: "Różnice kulturowe w komunikacji biznesowej, przygotowanie do negocjacji i prezentacji z partnerami z różnych kultur.",
+                            redirect: false
                         },
                         {
                             title: "Komunikacja managerska",
-                            description: "Oceny pracownicze, informacja zwrotna, komunikacja wewnętrzna i zewnętrzna, asertywność i komunikacja niewerbalna."
+                            description: "Oceny pracownicze, informacja zwrotna, komunikacja wewnętrzna i zewnętrzna, asertywność i komunikacja niewerbalna.",
+                            redirect: false
                         },
                         {
                             title: "Komunikacja biznesowa z savoir-vivre’em",
-                            description: "Kanały komunikacji, etykieta językowa, normy grzecznościowe w różnych kulturach. Szkolenie dostępne po polsku lub angielsku."
+                            description: "Kanały komunikacji, etykieta językowa, normy grzecznościowe w różnych kulturach. Szkolenie dostępne po polsku lub angielsku.",
+                            redirect: false
                         },
                         {
                             title: "Komunikacja międzypokoleniowa",
-                            description: "Preferencje komunikacyjne różnych generacji (Boomers, X, Y, Z), optymalne kanały komunikacji i różnice w stylach."
+                            description: "Preferencje komunikacyjne różnych generacji (Boomers, X, Y, Z), optymalne kanały komunikacji i różnice w stylach.",
+                            redirect: false
                         }
                     ]
                 },

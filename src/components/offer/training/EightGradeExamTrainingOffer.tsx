@@ -1,13 +1,13 @@
 import React from 'react';
-import { GraduationCap, Users, User } from 'lucide-react';
+import { GraduationCap, Users, User, School } from 'lucide-react';
 import OfferSectionHeader from "@/components/offer/OfferSectionHeader";
 import OfferServiceCard from "@/components/offer/OfferServiceCard";
 
-export default function MaturaExamTrainingOffer() {
+export default function EightGradeExamTrainingOffer() {
     const maturaServices = [
         {
             cardTitle: "Kurs indywidualny",
-            cardDescription: "Pełne skupienie na Twoich potrzebach i celach maturalnych",
+            cardDescription: "Pełne skupienie na Twoich potrzebach i celach w przygotowaniu do egzaminu ósmoklasisty",
             icon: <User size={24} />,
             slug: "kontakt"
         },
@@ -32,12 +32,12 @@ export default function MaturaExamTrainingOffer() {
     ];
 
     return (
-        <section className="py-16 bg-white" id="kursy-maturalne">
+        <section className="py-16 bg-white" id="kursy-dla-8klasistow">
             <div className="container mx-auto px-6">
                 <OfferSectionHeader
-                    title="Kursy maturalne"
-                    subtitle="Przygotowanie do matury z języka angielskiego – poziom podstawowy i rozszerzony"
-                    icon={<GraduationCap size={32} />}
+                    title="Kursy dla ósmoklasistów"
+                    subtitle="Przygotowanie do egzaminu ośmoklasity z języków obcych"
+                    icon={<School size={32} />}
                 />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {maturaServices.map((service, index) => (

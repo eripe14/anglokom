@@ -1,4 +1,4 @@
-import { GraduationCap, Building2, Languages } from "lucide-react";
+import { GraduationCap, Building2, Languages, School } from "lucide-react";
 
 export const offerItems = [
     {
@@ -12,6 +12,12 @@ export const offerItems = [
         label: 'Szkolenia biznesowe',
         icon: Building2,
         description: 'Rozwój kompetencji miękkich i umiejętności biznesowych'
+    },
+    {
+        section: 'kursy-dla-8klasistow',
+        label: 'Kursy dla ósmoklasistów',
+        icon: School,
+        description: 'Przygotowanie do egzaminu ósmoklasisty z języków obcych'
     },
     {
         section: 'kursy-maturalne',

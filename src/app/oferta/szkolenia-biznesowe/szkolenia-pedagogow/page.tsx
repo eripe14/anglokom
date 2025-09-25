@@ -32,19 +32,23 @@ export default function SzkoleniaMetodyczneDlaNauczycieli() {
                     content: [
                         {
                             title: "Metodyka języka angielskiego",
-                            description: "Pigułka odświeżająca – metody, techniki, nowoczesne materiały, strategie dla różnych grup wiekowych."
+                            description: "Pigułka odświeżająca – metody, techniki, nowoczesne materiały, strategie dla różnych grup wiekowych.",
+                            redirect: false
                         },
                         {
                             title: "Metodyka języka niemieckiego",
-                            description: "Odświeżenie wiedzy, techniki nauczania, rekomendacje materiałów, praca z dziećmi i dorosłymi."
+                            description: "Odświeżenie wiedzy, techniki nauczania, rekomendacje materiałów, praca z dziećmi i dorosłymi.",
+                            redirect: false
                         },
                         {
                             title: "Metodyka języka francuskiego",
-                            description: "Aktualne podejścia do nauczania, organizacja lekcji, nowoczesne rozwiązania dydaktyczne."
+                            description: "Aktualne podejścia do nauczania, organizacja lekcji, nowoczesne rozwiązania dydaktyczne.",
+                            redirect: false
                         },
                         {
                             title: "Metodyka języka rosyjskiego",
-                            description: "Techniki dydaktyczne i praktyczne sposoby prowadzenia zajęć w różnych grupach wiekowych."
+                            description: "Techniki dydaktyczne i praktyczne sposoby prowadzenia zajęć w różnych grupach wiekowych.",
+                            redirect: false
                         }
                     ]
                 },

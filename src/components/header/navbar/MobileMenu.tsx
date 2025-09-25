@@ -12,9 +12,8 @@ export default function MobileMenu({ isOpen, setIsOpen, t }: { isOpen: boolean; 
     ];
 
     const otherMenuItems = [
-        { href: '/biuro-tlumaczen', label: t('nav.translations') || 'Biuro tłumaczeń' },
-        { href: '/audyty', label: t('nav.audits') || 'Audyty' }
-
+        { href: '/audyty', label: t('nav.audits') || 'Audyty' },
+        { href: '/biuro-tlumaczen', label: t('nav.translations') || 'Biuro tłumaczeń' }
     ];
 
     {/*{ href: '/blog', label: t('nav.blog') || 'Blog' }*/}

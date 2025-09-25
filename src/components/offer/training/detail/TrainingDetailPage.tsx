@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import {ArrowLeft, Clock, Users, MapPin, Award, CheckCircle, GraduationCap, Star} from 'lucide-react';
-import {TrainingDetail, ContentSection} from "@/components/offer/training/detail/TrainingDetail";
+import {TrainingDetail, ContentSection, GridItem} from "@/components/offer/training/detail/TrainingDetail";
 import Navbar from "@/components/header/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import { slugify } from "@/../lib/slugify";
@@ -28,17 +28,26 @@ export default function TrainingDetailPage({training, backHref = "/oferta"}: Tra
             case 'grid':
                 return (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {(section.content as { title: string; description: string }[]).map((item, index) => {
+                        {(section.content as any[]).map((item, index) => {
                             const slug = slugify(item.title);
-                            return (
-                                <Link
-                                    key={index}
-                                    href={`${section.href}/${slug}`}
-                                    className="block bg-gray-100 rounded-lg p-4 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
-                                >
+                            const shouldRedirect = item.redirect !== false && section.href;
+
+                            const content = (
+                                <div
+                                    className="block bg-gray-100 rounded-lg p-4 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                                     <h4 className="font-semibold text-gray-800 text-lg mb-2">{item.title}</h4>
                                     <p className="text-gray-700 text-md text-justify">{item.description}</p>
+                                </div>
+                            );
+
+                            return shouldRedirect ? (
+                                <Link key={index} href={`${section.href}/${slug}`}>
+                                    {content}
                                 </Link>
+                            ) : (
+                                <div key={index}>
+                                    {content}
+                                </div>
                             );
                         })}
                     </div>

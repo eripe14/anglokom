@@ -7,6 +7,12 @@ export interface ContentSection {
     href?: string;
 }
 
+export interface GridItem {
+    title: string;
+    description: string;
+    redirect?: boolean;
+}
+
 export interface TrainingDetail {
     title: string;
     subtitle: string;
