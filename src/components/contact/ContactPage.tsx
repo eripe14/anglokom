@@ -64,19 +64,19 @@ export default function ContactPage() {
                                     <div>
                                         <h3 className="text-lg font-semibold text-gray-900 mb-2">Telefon</h3>
                                         <p className="text-gray-600">
-                                            Biuro tłumaczeń:
-                                            <a href="tel:+48606622736"
-                                               className="hover:text-green-600 transition-colors">
-                                                 +48 606 622 736
-                                            </a>
-
-                                        </p>
-                                        <p className="text-gray-600">
                                             Szkolenia, audyty:
                                             <a href="tel:+48600238340"
                                                className="hover:text-green-600 transition-colors">
                                                 +48 600 238 340
                                             </a>
+                                        </p>
+                                        <p className="text-gray-600">
+                                            Biuro tłumaczeń:
+                                            <a href="tel:+48606622736"
+                                               className="hover:text-green-600 transition-colors">
+                                                +48 606 622 736
+                                            </a>
+
                                         </p>
                                     </div>
                                 </div>
@@ -84,8 +84,9 @@ export default function ContactPage() {
                                 {/* Email */}
                                 <div className="flex items-start space-x-4">
                                     <div className="bg-purple-100 p-3 rounded-lg flex-shrink-0">
-                                        <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor"
+                                             viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                         </svg>
                                     </div>
                                     <div>
