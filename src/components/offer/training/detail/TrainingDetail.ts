@@ -2,7 +2,7 @@ import React from "react";
 
 export interface ContentSection {
     title: string;
-    type: "list" | "grid" | "custom" | "schedule" | "text";
+    type: "list" | "grid" | "custom" | "schedule" | "text" | "point-list";
     content: unknown;
     href?: string;
 }

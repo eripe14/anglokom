@@ -25,27 +25,47 @@ export default function TrainingDetailPage({training, backHref = "/oferta"}: Tra
                         ))}
                     </div>
                 );
+
+            case "point-list":
+                return (
+                    <div className="space-y-6">
+                        {(section.content as string[]).map((item, index) => (
+                            <div key={index} className="flex items-start group">
+                                <div className="flex-shrink-0 mr-4">
+                                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-600 to-sky-700 text-white rounded-full flex items-center justify-center font-bold text-sm shadow-lg group-hover:shadow-xl transition-all duration-300">
+                                        {index + 1}
+                                    </div>
+                                </div>
+                                <div className="flex-1 pt-0.5">
+                                    <p className="text-gray-700 leading-relaxed text-justify group-hover:text-gray-800 transition-colors duration-300">
+                                        {item}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                );
             case 'grid':
                 return (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {(section.content as any[]).map((item, index) => {
+                        {(section.content as GridItem[]).map((item, index) => {
                             const slug = slugify(item.title);
                             const shouldRedirect = item.redirect !== false && section.href;
 
                             const content = (
                                 <div
-                                    className="block bg-gray-100 rounded-lg p-4 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                    className="block bg-gray-100 rounded-lg p-4 hover:shadow-lg transition-all duration-300 transform hover:scale-105 h-full flex-col">
                                     <h4 className="font-semibold text-gray-800 text-lg mb-2">{item.title}</h4>
-                                    <p className="text-gray-700 text-md text-justify">{item.description}</p>
+                                    <p className="text-gray-700 text-md text-justify flex-grow">{item.description}</p>
                                 </div>
                             );
 
                             return shouldRedirect ? (
-                                <Link key={index} href={`${section.href}/${slug}`}>
+                                <Link key={index} href={`${section.href}/${slug}`} className="h-full">
                                     {content}
                                 </Link>
                             ) : (
-                                <div key={index}>
+                                <div key={index} className="h-full">
                                     {content}
                                 </div>
                             );
@@ -225,7 +245,7 @@ export default function TrainingDetailPage({training, backHref = "/oferta"}: Tra
                                 {/* Primary (bez zmian) */}
                                 <Link href={training.cta.primaryButtonLink || "/kontakt"}>
                                     <button
-                                        className="w-full bg-gradient-to-r from-cyan-600 to-sky-700 text-white py-3 px-6 my-5 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                        className="w-full bg-gradient-to-r from-cyan-600 to-sky-700 text-white py-3 px-6 my-5 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:scale-105">
                                         {training.cta.primaryButton}
                                     </button>
                                 </Link>
@@ -237,7 +257,7 @@ export default function TrainingDetailPage({training, backHref = "/oferta"}: Tra
                                         <a
                                             href={training.cta.secondaryButtonLink}
                                             download={training.cta.secondaryDownloadFileName}
-                                            className="w-full border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 block text-center"
+                                            className="w-full border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white py-3 px-6 rounded-lg font-semibold cursor-pointer transition-all duration-300 block text-center"
                                             rel="noopener noreferrer"
                                         >
                                             {training.cta.secondaryButton}
@@ -246,7 +266,7 @@ export default function TrainingDetailPage({training, backHref = "/oferta"}: Tra
                                         // zwykła nawigacja
                                         <Link href={training.cta.secondaryButtonLink}>
                                             <button
-                                                className="w-full border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300">
+                                                className="w-full border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 cursor-pointer">
                                                 {training.cta.secondaryButton}
                                             </button>
                                         </Link>
@@ -259,7 +279,7 @@ export default function TrainingDetailPage({training, backHref = "/oferta"}: Tra
                                         <a
                                             href={training.cta.tertiaryButtonLink}
                                             download={training.cta.tertiaryDownloadFileName}
-                                            className="w-full border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 block text-center"
+                                            className="w-full border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 block text-center cursor-pointer"
                                             rel="noopener noreferrer"
                                         >
                                             {training.cta.tertiaryButton}
@@ -267,7 +287,7 @@ export default function TrainingDetailPage({training, backHref = "/oferta"}: Tra
                                     ) : (
                                         <Link href={training.cta.tertiaryButtonLink}>
                                             <button
-                                                className="w-full border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300">
+                                                className="w-full border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 cursor-pointer">
                                                 {training.cta.tertiaryButton}
                                             </button>
                                         </Link>

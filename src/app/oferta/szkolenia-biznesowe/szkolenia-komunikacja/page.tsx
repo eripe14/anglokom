@@ -1,8 +1,16 @@
 import { MessageSquare } from 'lucide-react';
 import { TrainingDetail } from "@/components/offer/training/detail/TrainingDetail";
 import TrainingDetailPage from "@/components/offer/training/detail/TrainingDetailPage";
+import {TRAININGS} from "@/data/trainings";
 
 export default function CommunicationTraining() {
+    const gridItems = TRAININGS.map(t => ({
+        title: t.title,
+        description: t.description,
+        slug: t.slug,
+    }));
+
+
     const trainingData: TrainingDetail = {
         title: "Szkolenia z komunikacji",
         subtitle: "Interpersonalna, międzykulturowa, managerska, międzypokoleniowa i biznesowa",
@@ -29,33 +37,7 @@ export default function CommunicationTraining() {
                     title: "Zakres szkoleń",
                     type: "grid",
                     href: "/oferta/szkolenia-biznesowe/szkolenia-komunikacja",
-                    content: [
-                        {
-                            title: "Komunikacja interpersonalna",
-                            description: "Typowe błędy komunikacyjne, aktywne słuchanie, efektywne zadawanie pytań. Praktyczne ćwiczenia rozwijające kompetencję komunikacyjną.",
-                            redirect: false
-                        },
-                        {
-                            title: "Komunikacja międzykulturowa",
-                            description: "Różnice kulturowe w komunikacji biznesowej, przygotowanie do negocjacji i prezentacji z partnerami z różnych kultur.",
-                            redirect: false
-                        },
-                        {
-                            title: "Komunikacja managerska",
-                            description: "Oceny pracownicze, informacja zwrotna, komunikacja wewnętrzna i zewnętrzna, asertywność i komunikacja niewerbalna.",
-                            redirect: false
-                        },
-                        {
-                            title: "Komunikacja biznesowa z savoir-vivre’em",
-                            description: "Kanały komunikacji, etykieta językowa, normy grzecznościowe w różnych kulturach. Szkolenie dostępne po polsku lub angielsku.",
-                            redirect: false
-                        },
-                        {
-                            title: "Komunikacja międzypokoleniowa",
-                            description: "Preferencje komunikacyjne różnych generacji (Boomers, X, Y, Z), optymalne kanały komunikacji i różnice w stylach.",
-                            redirect: false
-                        }
-                    ]
+                    content: gridItems
                 },
                 {
                     title: "Dodatkowe informacje",
@@ -65,9 +47,14 @@ export default function CommunicationTraining() {
             ]
         },
         cta: {
-            primaryButton: "Wypełnij formularz kontaktowy",
+            primaryButton: "Skontaktuj się z nami",
             primaryButtonLink: "/kontakt",
-            secondaryButton: "Zamów wycenę szkolenia"
+            secondaryButton: "Pobierz katalog wersja pełna",
+            secondaryButtonLink: "/downloads/ANGLOKOM_Oferta szkoleń_Kompetencje i komunikacja międzykulturowa_opis.docx",
+            secondaryDownloadFileName: "Katalog_szkolen_jezykowych.docx",
+            tertiaryButton: "Pobierz katalog wersja krótka",
+            tertiaryButtonLink: "/downloads/ANGLOKOM_Oferta szkoleń_Kompetencje i komunikacja międzykulturowa_short.pptx",
+            tertiaryDownloadFileName: "Katalog_szkolen_jezykowych_krotki.pptx"
         }
     };
 
